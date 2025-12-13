@@ -11,6 +11,15 @@ export default antfu(
     },
     react: true,
 
+      // 👇 NEW: global ignores (replaces .eslintignore)
+    ignores: [
+      '**/dist',
+      '**/build',
+      '**/coverage',
+      'pnpm-lock.yaml',
+      // add more if you like
+    ],
+    
     // Enable external formatters for non-JS/TS files
     // Powered by eslint-plugin-format
     // (CSS, HTML, JSON, Markdown via Prettier under the hood)
@@ -24,7 +33,7 @@ export default antfu(
     // Stylistic rules (this is your “formatter” for JS/TS)
     stylistic: {
       indent: 2,
-      quotes: 'single',
+      quotes: "double",
       semi: true,
     },
   },
